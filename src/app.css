@@ -126,3 +126,8 @@
 		@apply border-2 border-red-500;
 	}
 }
+
+[data-slot='sidebar'] {
+	--sidebar-width: 18rem;
+	--text-sm: 0.9rem;
+}
