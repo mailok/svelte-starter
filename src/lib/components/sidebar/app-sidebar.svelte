@@ -145,10 +145,10 @@
 	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
 	import type { ComponentProps } from 'svelte';
 	import NavGeneral from './nav-general.svelte';
-	import NavProjects from './nav-projects.svelte';
+	import NavSchedule from './nav-schedule.svelte';
+	import NavSettings from './nav-settings.svelte';
 	import NavUser from './nav-user.svelte';
 	import TeamSwitcher from './team-switcher.svelte';
-
 	let {
 		ref = $bindable(null),
 		collapsible = 'icon',
@@ -162,7 +162,8 @@
 	</Sidebar.Header>
 	<Sidebar.Content>
 		<NavGeneral />
-		<NavProjects projects={data.projects} />
+		<NavSchedule />
+		<NavSettings />
 	</Sidebar.Content>
 	<Sidebar.Footer>
 		<NavUser user={data.user} />
