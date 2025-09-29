@@ -41,5 +41,8 @@
 		"onlyBuiltDependencies": [
 			"esbuild"
 		]
+	},
+	"dependencies": {
+		"runed": "^0.34.0"
 	}
 }
