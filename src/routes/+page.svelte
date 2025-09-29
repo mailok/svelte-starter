@@ -1,5 +1,5 @@
 <script>
-	import ThemeToggle from "@/components/theme-toggle.svelte";
+	import ThemeToggle from "$lib/components/theme-toggle.svelte";
 
 </script>
 <div class="flex flex-col items-center justify-center h-screen">
