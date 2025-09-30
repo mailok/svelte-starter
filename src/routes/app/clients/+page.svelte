@@ -2,4 +2,4 @@
 	import UnderConstruction from '$lib/components/under-construction.svelte';
 </script>
 
-<UnderConstruction pageName="Dashboard" />
+<UnderConstruction pageName="Clients" />

@@ -3,6 +3,12 @@
 	import ArrowLeftIcon from '@lucide/svelte/icons/arrow-left';
 	import ConstructionIcon from '@lucide/svelte/icons/construction';
 	import HammerIcon from '@lucide/svelte/icons/hammer';
+
+	type Props = {
+		pageName?: string;
+	};
+
+	let { pageName }: Props = $props();
 </script>
 
 <section class="flex size-full flex-col items-center justify-center p-4">
@@ -24,15 +30,33 @@
 		</div>
 
 		<div class="space-y-4 text-center">
-			<h1
-				class="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-4xl font-bold text-transparent"
-			>
-				Under Construction
-			</h1>
+			{#if pageName}
+				<div class="space-y-2">
+					<h2 class="text-xl font-semibold text-muted-foreground">
+						{pageName}
+					</h2>
+					<h1
+						class="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-4xl font-bold text-transparent"
+					>
+						Under Construction
+					</h1>
+				</div>
+			{:else}
+				<h1
+					class="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-4xl font-bold text-transparent"
+				>
+					Under Construction
+				</h1>
+			{/if}
 
 			<p class="max-w-md text-lg leading-relaxed text-muted-foreground">
-				This page is currently under construction. We're working hard to get it ready for you. Stay
-				tuned!
+				{#if pageName}
+					The <span class="font-medium text-foreground">{pageName}</span> page is currently under construction.
+					We're working hard to get it ready for you. Stay tuned!
+				{:else}
+					This page is currently under construction. We're working hard to get it ready for you.
+					Stay tuned!
+				{/if}
 			</p>
 
 			<!-- Progress bar simulation -->
