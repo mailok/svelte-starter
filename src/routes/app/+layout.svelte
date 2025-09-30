@@ -1,10 +1,13 @@
 <script lang="ts">
+	import { setBreadcrumbs } from '$lib/breadcrumbs-context.svelte';
 	import AppSidebar from '$lib/components/sidebar/app-sidebar.svelte';
 	import ThemeToggle from '$lib/components/theme-toggle.svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Separator } from '$lib/components/ui/separator/index.js';
 	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
 	let { children } = $props();
+
+	setBreadcrumbs();
 </script>
 
 <Sidebar.Provider>

@@ -1,19 +1,20 @@
 <script lang="ts">
 	import { useBreadcrumbs } from '$lib/breadcrumbs-context.svelte';
-	import UnderConstruction from '$lib/components/under-construction.svelte';
 	import { onMount } from 'svelte';
+
+	let { children } = $props();
 
 	const breadcrumbs = useBreadcrumbs();
 
 	onMount(() => {
 		breadcrumbs.addItem({
-			key: 'benefits',
+			key: 'clients',
 			snippet: breadcrumb
 		});
 	});
 </script>
 
 {#snippet breadcrumb()}
-	<span>Benefits</span>
+	<span>Clients</span>
 {/snippet}
-<UnderConstruction pageName="Benefits" />
+{@render children()}
