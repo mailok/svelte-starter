@@ -1,9 +1,12 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
 	import LayoutDashboard from '@lucide/svelte/icons/layout-dashboard';
 	import ListToDo from '@lucide/svelte/icons/list-todo';
 	import PersonStanding from '@lucide/svelte/icons/person-standing';
 	import Users from '@lucide/svelte/icons/users';
+
+	$inspect(page);
 </script>
 
 <Sidebar.Group>
