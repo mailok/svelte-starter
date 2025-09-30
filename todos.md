@@ -12,11 +12,12 @@
 - [✅] Create sidebar structure
 - [✅] Add example options to sidebar
 - [] Continue sidebar development
-  - [] Create corresponding pages for each dashboard example link
-  - [] Add "under construction" component for pages in progress
-  - [] Implement individual page creation (one by one)
-  - [] Mark active link based on current route
+  - [✅] Create corresponding pages for each dashboard example link
+  - [✅] Add "under construction" component for pages in progress
+  - [✅] Mark active link based on current route
+  - [✅] Add default 404 page for non-existent routes
   - [] Implement breadcrumbs component
+  - [] Implement individual page creation (one by one)
 
 ## Page Implementation
 
