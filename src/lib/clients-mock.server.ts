@@ -1,0 +1,364 @@
+export type Client = {
+	id: string;
+	photo: string;
+	name: string;
+	email: string;
+	phone: string;
+	birthDate: string;
+	age: number;
+	gender: 'male' | 'female';
+	status: 'active' | 'inactive' | 'pending';
+	createdAt: string;
+	updatedAt: string;
+};
+
+export const clientsData: Client[] = [
+	{
+		id: '1',
+		photo:
+			'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
+		name: 'Juan Carlos Rodríguez',
+		email: 'juan.rodriguez@email.com',
+		phone: '+1 (555) 123-4567',
+		birthDate: '1985-03-15',
+		age: 39,
+		gender: 'male',
+		status: 'active',
+		createdAt: '2023-01-15T10:30:00Z',
+		updatedAt: '2024-01-10T14:20:00Z'
+	},
+	{
+		id: '2',
+		photo: '',
+		name: 'María González López',
+		email: 'maria.gonzalez@email.com',
+		phone: '+1 (555) 234-5678',
+		birthDate: '1990-07-22',
+		age: 34,
+		gender: 'female',
+		status: 'pending',
+		createdAt: '2023-02-20T09:15:00Z',
+		updatedAt: '2024-01-08T11:45:00Z'
+	},
+	{
+		id: '3',
+		photo:
+			'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+		name: 'Roberto Silva',
+		email: 'roberto.silva@email.com',
+		phone: '+1 (555) 345-6789',
+		birthDate: '1978-11-08',
+		age: 45,
+		gender: 'male',
+		status: 'inactive',
+		createdAt: '2023-03-10T16:45:00Z',
+		updatedAt: '2023-12-15T08:30:00Z'
+	},
+	{
+		id: '4',
+		photo:
+			'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
+		name: 'Ana Patricia Morales',
+		email: 'ana.morales@email.com',
+		phone: '+1 (555) 456-7890',
+		birthDate: '1992-05-30',
+		age: 32,
+		gender: 'female',
+		status: 'active',
+		createdAt: '2023-04-05T13:20:00Z',
+		updatedAt: '2024-01-12T15:10:00Z'
+	},
+	{
+		id: '5',
+		photo:
+			'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
+		name: 'Carlos Eduardo Vega',
+		email: 'carlos.vega@email.com',
+		phone: '+1 (555) 567-8901',
+		birthDate: '1987-09-12',
+		age: 37,
+		gender: 'male',
+		status: 'active',
+		createdAt: '2023-05-18T11:30:00Z',
+		updatedAt: '2024-01-09T09:20:00Z'
+	},
+	{
+		id: '6',
+		photo:
+			'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face',
+		name: 'Sofía Hernández',
+		email: 'sofia.hernandez@email.com',
+		phone: '+1 (555) 678-9012',
+		birthDate: '1995-12-03',
+		age: 29,
+		gender: 'female',
+		status: 'pending',
+		createdAt: '2023-06-22T14:40:00Z',
+		updatedAt: '2024-01-11T16:30:00Z'
+	},
+	{
+		id: '7',
+		photo:
+			'https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=150&h=150&fit=crop&crop=face',
+		name: 'Lucía Ramírez',
+		email: 'lucia.ramirez@email.com',
+		phone: '+1 (555) 789-0123',
+		birthDate: '1988-04-18',
+		age: 36,
+		gender: 'female',
+		status: 'active',
+		createdAt: '2023-07-10T12:00:00Z',
+		updatedAt: '2024-01-13T10:15:00Z'
+	},
+	{
+		id: '8',
+		photo:
+			'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face',
+		name: 'Miguel Ángel Torres',
+		email: 'miguel.torres@email.com',
+		phone: '+1 (555) 890-1234',
+		birthDate: '1982-10-25',
+		age: 41,
+		gender: 'male',
+		status: 'inactive',
+		createdAt: '2023-08-15T08:30:00Z',
+		updatedAt: '2023-12-20T17:45:00Z'
+	},
+	{
+		id: '9',
+		photo:
+			'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face',
+		name: 'Paula Fernández',
+		email: 'paula.fernandez@email.com',
+		phone: '+1 (555) 901-2345',
+		birthDate: '1993-02-11',
+		age: 31,
+		gender: 'female',
+		status: 'pending',
+		createdAt: '2023-09-05T15:10:00Z',
+		updatedAt: '2024-01-14T13:25:00Z'
+	},
+	{
+		id: '10',
+		photo:
+			'https://images.unsplash.com/photo-1463453091185-61582044d556?w=150&h=150&fit=crop&crop=face',
+		name: 'Javier Castillo',
+		email: 'javier.castillo@email.com',
+		phone: '+1 (555) 012-3456',
+		birthDate: '1980-06-09',
+		age: 44,
+		gender: 'male',
+		status: 'active',
+		createdAt: '2023-10-12T11:45:00Z',
+		updatedAt: '2024-01-15T09:50:00Z'
+	},
+	{
+		id: '11',
+		photo:
+			'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=150&h=150&fit=crop&crop=face',
+		name: 'Valeria Soto',
+		email: 'valeria.soto@email.com',
+		phone: '+1 (555) 123-6789',
+		birthDate: '1997-08-21',
+		age: 26,
+		gender: 'female',
+		status: 'active',
+		createdAt: '2023-11-18T14:20:00Z',
+		updatedAt: '2024-01-16T12:30:00Z'
+	},
+	{
+		id: '12',
+		photo: '',
+		name: 'Andrés Pérez',
+		email: 'andres.perez@email.com',
+		phone: '+1 (555) 234-7890',
+		birthDate: '1984-01-27',
+		age: 40,
+		gender: 'male',
+		status: 'inactive',
+		createdAt: '2023-12-22T10:10:00Z',
+		updatedAt: '2024-01-17T08:40:00Z'
+	},
+	{
+		id: '13',
+		photo:
+			'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=150&h=150&fit=crop&crop=face',
+		name: 'Gabriela Ruiz',
+		email: 'gabriela.ruiz@email.com',
+		phone: '+1 (555) 345-8901',
+		birthDate: '1991-11-14',
+		age: 32,
+		gender: 'female',
+		status: 'pending',
+		createdAt: '2024-01-02T09:00:00Z',
+		updatedAt: '2024-01-18T15:55:00Z'
+	},
+	{
+		id: '14',
+		photo:
+			'https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=150&h=150&fit=crop&crop=face',
+		name: 'Tomás Herrera',
+		email: 'tomas.herrera@email.com',
+		phone: '+1 (555) 456-9012',
+		birthDate: '1989-05-05',
+		age: 35,
+		gender: 'male',
+		status: 'active',
+		createdAt: '2024-01-05T16:30:00Z',
+		updatedAt: '2024-01-19T11:10:00Z'
+	},
+	{
+		id: '15',
+		photo:
+			'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
+		name: 'Diego Mendoza',
+		email: 'diego.mendoza@email.com',
+		phone: '+1 (555) 567-0123',
+		birthDate: '1986-03-18',
+		age: 38,
+		gender: 'male',
+		status: 'active',
+		createdAt: '2024-01-08T13:15:00Z',
+		updatedAt: '2024-01-20T10:25:00Z'
+	},
+	{
+		id: '16',
+		photo:
+			'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face',
+		name: 'Carmen Jiménez',
+		email: 'carmen.jimenez@email.com',
+		phone: '+1 (555) 678-1234',
+		birthDate: '1994-09-25',
+		age: 29,
+		gender: 'female',
+		status: 'active',
+		createdAt: '2024-01-10T09:40:00Z',
+		updatedAt: '2024-01-21T14:50:00Z'
+	},
+	{
+		id: '17',
+		photo:
+			'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+		name: 'Fernando Castro',
+		email: 'fernando.castro@email.com',
+		phone: '+1 (555) 789-2345',
+		birthDate: '1983-12-07',
+		age: 40,
+		gender: 'male',
+		status: 'active',
+		createdAt: '2024-01-12T11:20:00Z',
+		updatedAt: '2024-01-22T16:35:00Z'
+	},
+	{
+		id: '18',
+		photo:
+			'https://images.unsplash.com/photo-1548372290-8d01b6c8e78c?w=150&h=150&fit=crop&crop=face',
+		name: 'Alejandra Vargas',
+		email: 'alejandra.vargas@email.com',
+		phone: '+1 (555) 890-3456',
+		birthDate: '1996-06-14',
+		age: 27,
+		gender: 'female',
+		status: 'active',
+		createdAt: '2024-01-14T15:30:00Z',
+		updatedAt: '2024-01-23T09:15:00Z'
+	},
+	{
+		id: '19',
+		photo:
+			'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
+		name: 'Ricardo Delgado',
+		email: 'ricardo.delgado@email.com',
+		phone: '+1 (555) 901-4567',
+		birthDate: '1990-01-29',
+		age: 34,
+		gender: 'male',
+		status: 'active',
+		createdAt: '2024-01-16T08:45:00Z',
+		updatedAt: '2024-01-24T12:40:00Z'
+	},
+	{
+		id: '20',
+		photo:
+			'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
+		name: 'Isabella Romero',
+		email: 'isabella.romero@email.com',
+		phone: '+1 (555) 012-5678',
+		birthDate: '1992-08-11',
+		age: 31,
+		gender: 'female',
+		status: 'active',
+		createdAt: '2024-01-18T10:20:00Z',
+		updatedAt: '2024-01-25T15:10:00Z'
+	},
+	{
+		id: '21',
+		photo:
+			'https://images.unsplash.com/photo-1463453091185-61582044d556?w=150&h=150&fit=crop&crop=face',
+		name: 'Sebastián Ortega',
+		email: 'sebastian.ortega@email.com',
+		phone: '+1 (555) 123-6789',
+		birthDate: '1988-11-03',
+		age: 35,
+		gender: 'male',
+		status: 'active',
+		createdAt: '2024-01-20T14:55:00Z',
+		updatedAt: '2024-01-26T11:30:00Z'
+	},
+	{
+		id: '22',
+		photo:
+			'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face',
+		name: 'Natalia Espinoza',
+		email: 'natalia.espinoza@email.com',
+		phone: '+1 (555) 234-7890',
+		birthDate: '1995-04-16',
+		age: 28,
+		gender: 'female',
+		status: 'active',
+		createdAt: '2024-01-22T12:10:00Z',
+		updatedAt: '2024-01-27T08:20:00Z'
+	},
+	{
+		id: '23',
+		photo:
+			'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=150&h=150&fit=crop&crop=face',
+		name: 'Emilio Navarro',
+		email: 'emilio.navarro@email.com',
+		phone: '+1 (555) 345-8901',
+		birthDate: '1981-07-28',
+		age: 42,
+		gender: 'male',
+		status: 'active',
+		createdAt: '2024-01-24T16:35:00Z',
+		updatedAt: '2024-01-28T13:45:00Z'
+	},
+	{
+		id: '24',
+		photo:
+			'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=150&h=150&fit=crop&crop=face',
+		name: 'Camila Restrepo',
+		email: 'camila.restrepo@email.com',
+		phone: '+1 (555) 456-9012',
+		birthDate: '1993-10-12',
+		age: 30,
+		gender: 'female',
+		status: 'active',
+		createdAt: '2024-01-26T09:25:00Z',
+		updatedAt: '2024-01-29T17:15:00Z'
+	},
+	{
+		id: '25',
+		photo:
+			'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face',
+		name: 'Óscar Gutiérrez',
+		email: 'oscar.gutierrez@email.com',
+		phone: '+1 (555) 567-0123',
+		birthDate: '1987-02-22',
+		age: 37,
+		gender: 'male',
+		status: 'active',
+		createdAt: '2024-01-28T11:50:00Z',
+		updatedAt: '2024-01-30T14:25:00Z'
+	}
+];

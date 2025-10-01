@@ -16,8 +16,9 @@
   - [✅] Add "under construction" component for pages in progress
   - [✅] Mark active link based on current route
   - [✅] Add default 404 page for non-existent routes
-  - [] Implement breadcrumbs component
+  - [✅] Implement breadcrumbs component
   - [] Implement individual page creation (one by one)
+    - [] Implement clients page
 
 ## Page Implementation
 
