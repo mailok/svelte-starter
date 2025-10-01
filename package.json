@@ -54,6 +54,7 @@
 		]
 	},
 	"dependencies": {
-		"runed": "^0.34.0"
+		"runed": "^0.34.0",
+		"valibot": "^1.1.0"
 	}
 }
