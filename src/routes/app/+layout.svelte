@@ -1,10 +1,11 @@
 <script lang="ts">
-	import { setBreadcrumbs } from '$lib/breadcrumbs-context.svelte';
+	import Breadcrumbs from '$lib/components/breadcrumbs.svelte';
 	import AppSidebar from '$lib/components/sidebar/app-sidebar.svelte';
 	import ThemeToggle from '$lib/components/theme-toggle.svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Separator } from '$lib/components/ui/separator/index.js';
 	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
+	import { setBreadcrumbs } from '@/breadcrumbs.svelte';
 	let { children } = $props();
 
 	setBreadcrumbs();
@@ -19,7 +20,7 @@
 			<div class="flex w-full items-center gap-1 px-4 lg:gap-2 lg:px-6">
 				<Sidebar.Trigger class="-ml-1" />
 				<Separator orientation="vertical" class="mx-2 data-[orientation=vertical]:h-4" />
-				<!-- <Breadcrumbs /> -->
+				<Breadcrumbs />
 				<div class="ml-auto flex items-center gap-2">
 					<Button variant="ghost" size="sm" class="hidden sm:flex">
 						<a

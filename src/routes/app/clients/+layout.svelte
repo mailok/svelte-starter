@@ -1,20 +1,19 @@
 <script lang="ts">
-	import { useBreadcrumbs } from '$lib/breadcrumbs-context.svelte';
-	import { onMount } from 'svelte';
+	import { useBreadcrumbs } from '$lib/breadcrumbs.svelte';
+	import { BreadcrumbItem, BreadcrumbLink } from '$lib/components/ui/breadcrumb/index.js';
 
 	let { children } = $props();
 
 	const breadcrumbs = useBreadcrumbs();
-
-	onMount(() => {
-		breadcrumbs.addItem({
-			key: 'clients',
-			snippet: breadcrumb
-		});
+	const crumb = breadcrumbs.register({
+		href: '/app/clients',
+		snippet: breadcrumb
 	});
 </script>
 
 {#snippet breadcrumb()}
-	<span>Clients</span>
+	<BreadcrumbItem>
+		<BreadcrumbLink href={crumb.href}>Clients</BreadcrumbLink>
+	</BreadcrumbItem>
 {/snippet}
 {@render children()}
