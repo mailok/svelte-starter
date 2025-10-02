@@ -9,18 +9,20 @@ export const load: PageServerLoad = async ({ url }) => {
 	// Validate and get search params
 	const { data } = validateSearchParams(url, clientSearchSchema);
 
-	// Get clients with validated params
-	const result = await getClients({
+	// Return the promise directly for streaming (no await)
+	const clientsPromise = getClients({
 		status: data.status,
 		search: data.search,
 		page: data.page,
 		size: data.size
-	});
-
-	return {
+	}).then((result) => ({
 		clients: result.clients,
 		total: result.total,
-		totalPages: Math.ceil(result.total / data.size),
-		searchParams: data
+		totalPages: Math.ceil(result.total / data.size)
+	}));
+
+	return {
+		searchParams: data,
+		clientsData: clientsPromise
 	};
 };

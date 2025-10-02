@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import ClientList from './client-list.svelte';
 	import Insights from './insights.svelte';
 	import SearchFilter from './search-filter.svelte';
 	import StatusFilter from './status-filter.svelte';
 	import ViewModeToggle from './view-mode-toggle.svelte';
+
+	let clientsDataPromise = $derived(page.data.clientsData);
 </script>
 
 <div class="flex size-full flex-col gap-6 p-6">
@@ -15,7 +18,6 @@
 		</div>
 		<ViewModeToggle />
 	</div>
-	{JSON.stringify(page.data)}
-	<!-- <ClientList />
-      <ClientsPagination /> -->
+	<ClientList {clientsDataPromise} />
+	<!-- <ClientsPagination /> -->
 </div>
