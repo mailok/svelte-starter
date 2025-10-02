@@ -1,5 +1,5 @@
 <script lang="ts">
-	// import { page } from '$app/state';
+	import { page } from '$app/state';
 	import Insights from './insights.svelte';
 	import SearchFilter from './search-filter.svelte';
 	import StatusFilter from './status-filter.svelte';
@@ -15,7 +15,7 @@
 		</div>
 		<ViewModeToggle />
 	</div>
-	<!-- {JSON.stringify(page.data)} -->
+	{JSON.stringify(page.data)}
 	<!-- <ClientList />
       <ClientsPagination /> -->
 </div>

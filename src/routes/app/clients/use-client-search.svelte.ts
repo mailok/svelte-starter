@@ -13,7 +13,6 @@ export type ClientSearchParams = v.InferOutput<typeof clientSearchSchema>;
 
 export function useClientSearch() {
 	return useSearchParams(clientSearchSchema, {
-		debounce: 300, // 300ms debounce to avoid multiple updates during typing
 		pushHistory: false, // Don't create new history entry for each change
 		showDefaults: false // Don't show default values in URL (cleaner URLs),
 	});
